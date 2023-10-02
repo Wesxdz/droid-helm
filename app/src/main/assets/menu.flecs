@@ -1,0 +1,145 @@
+using flecs.meta
+
+Struct GraphNode {
+  x :- {f32}
+  y :- {f32}
+}
+
+Struct Edge {
+    head_x :- {f32}
+    head_y :- {f32}
+    tail_x :- {f32}
+    tail_y :- {f32}
+}
+
+Struct CubicEdgeMod {
+    mid_a_x :- {f32}
+    mid_a_y :- {f32}
+    mid_b_x :- {f32}
+    mid_b_y :- {f32}
+}
+
+Struct NodeSnapDestination {
+    radius :- {f32}
+    enabled :- {i32}
+}
+
+Struct GraphEvent {
+  snapEvent :- {i32}
+  name :- {string}
+}
+
+Struct GraphNodeCategory
+{
+  name :- {string}
+}
+
+Struct NodeRenderState
+{
+  radius :- {f32}
+}
+
+ui_personal_node_parent {
+    - GraphNode{0, 0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - NodeSnapDestination{64.0, 1.0}
+}
+
+ui_personal_node_0 {
+    - GraphNode{144, -504.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - GraphEvent{0, open_intentions}
+    - NodeSnapDestination{64.0, 1.0}
+    _ :- Edge{144, -504.0, 144, -360.0}
+    _ {
+        - Edge{144, -504.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, -504.0, 0.0, -504.0 }
+    }
+}
+
+ui_personal_node_1 {
+    - GraphNode{144, -360.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - GraphEvent{0, open_spacetime}
+    - NodeSnapDestination{64.0, 1.0}
+    _ :- Edge{144, -360.0, 144, -216.0}
+    _ {
+        - Edge{144, -360.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, -360.0, 0.0, -360.0 }
+    }
+}
+
+ui_personal_node_2 {
+    - GraphNode{144, -216.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - GraphEvent{0, open_capital}
+    - NodeSnapDestination{64.0, 1.0}
+    _ :- Edge{144, -216.0, 144, -72.0}
+    _ {
+        - Edge{144, -216.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, -216.0, 0.0, -216.0 }
+    }
+}
+
+ui_personal_node_3 {
+    - GraphNode{144, -72.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - NodeSnapDestination{64.0, 1.0}
+    _ :- Edge{144, -72.0, 144, 72.0}
+    _ {
+        - Edge{144, -72.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, -72.0, 0.0, -72.0 }
+    }
+}
+
+ui_personal_node_4 {
+    - GraphNode{144, 72.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - NodeSnapDestination{64.0, 1.0}
+    _ :- Edge{144, 72.0, 144, 216.0}
+    _ {
+        - Edge{144, 72.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, 72.0, 0.0, 72.0 }
+    }
+}
+
+ui_personal_node_5 {
+    - GraphNode{144, 216.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - NodeSnapDestination{64.0, 1.0}
+    _ :- Edge{144, 216.0, 144, 360.0}
+    _ {
+        - Edge{144, 216.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, 216.0, 0.0, 216.0 }
+    }
+}
+
+ui_personal_node_6 {
+    - GraphNode{144, 360.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - NodeSnapDestination{64.0, 1.0}
+    _ :- Edge{144, 360.0, 144, 504.0}
+    _ {
+        - Edge{144, 360.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, 360.0, 0.0, 360.0 }
+    }
+}
+
+ui_personal_node_7 {
+    - GraphNode{144, 504.0}
+    - NodeRenderState{12.0}
+    - GraphNodeCategory{ui}
+    - NodeSnapDestination{64.0, 1.0}
+    _ {
+        - Edge{144, 504.0, 0, 0}
+        - CubicEdgeMod{ 86.39999999999999, 504.0, 0.0, 504.0 }
+    }
+}

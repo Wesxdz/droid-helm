@@ -1,0 +1,18 @@
+using flecs.meta
+
+Struct GraphNode {
+  x :- {f32}
+  y :- {f32}
+}
+
+menu {
+    secondary {
+        - GraphNode{0.0, 0.0}
+    }
+}
+
+graph {
+    compose {
+        - (Equivariant, secondary)}
+    }
+}

@@ -1,0 +1,250 @@
+using flecs.meta
+
+Struct GraphNode {
+  x :- {f32}
+  y :- {f32}
+}
+
+Struct NodeSnapDestination {
+  radius :- {f32}
+  enabled :- {i32}
+}
+
+Struct CreateSpringEdgeData {
+  strength :- {f32}
+}
+
+Struct GraphEvent {
+  snapEvent :- {i32}
+  name :- {string}
+}
+
+Struct GraphNodeCategory
+{
+  name :- {string}
+}
+
+Struct NodeRenderState
+{
+  radius :- {f32}
+}
+
+spring_personal_node_parent {
+    - GraphNode{0.0, 0.0}
+    - NodeRenderState{16.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_parent)
+}
+
+ui_personal_node_anchor {
+    - GraphNode{0.0, 44.8}
+    - NodeRenderState{12.0}
+    - GraphEvent{0, open_personal_data_menu}
+    - GraphNodeCategory{palace}
+    - NodeSnapDestination{95.0, 1.0}
+    - NodeAnchor
+    - PhysicalNodeSim
+}
+
+spring_personal_node_0 {
+    - GraphNode{14.4, -50.400000000000006}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_1_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_0_edge_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_0_edge_2)
+}
+
+spring_personal_node_1 {
+    - GraphNode{14.4, -36.0}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_2_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_1_edge_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_1_edge_2)
+}
+
+spring_personal_node_2 {
+    - GraphNode{14.4, -21.6}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_2)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_3_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_2_edge_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_2_edge_2)
+}
+
+spring_personal_node_3 {
+    - GraphNode{14.4, -7.2}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_3)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_4_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_3_edge_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_3_edge_2)
+}
+
+spring_personal_node_4 {
+    - GraphNode{14.4, 7.2}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_4)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_5_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_4_edge_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_4_edge_2)
+}
+
+spring_personal_node_5 {
+    - GraphNode{14.4, 21.6}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_5)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_6_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_5_edge_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_5_edge_2)
+}
+
+spring_personal_node_6 {
+    - GraphNode{14.4, 36.0}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_6)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_7_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_6_edge_1)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_6_edge_2)
+}
+
+spring_personal_node_7 {
+    - GraphNode{14.4, 50.400000000000006}
+    - NodeRenderState{8.0}
+    - GraphNodeCategory{palace}
+    - PhysicalNodeSim
+    - (Equivariant, ui_personal_node_7)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_7_edge_0)
+    - (CreateSpringEdgeFromConfig, spring_personal_node_7_edge_1)
+}
+
+spring_personal_node_1_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_1)
+}
+
+spring_personal_node_0_edge_1 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_0_edge_2 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}
+
+spring_personal_node_2_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_2)
+}
+
+spring_personal_node_1_edge_1 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_1_edge_2 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}
+
+spring_personal_node_3_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_3)
+}
+
+spring_personal_node_2_edge_1 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_2_edge_2 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}
+
+spring_personal_node_4_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_4)
+}
+
+spring_personal_node_3_edge_1 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_3_edge_2 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}
+
+spring_personal_node_5_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_5)
+}
+
+spring_personal_node_4_edge_1 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_4_edge_2 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}
+
+spring_personal_node_6_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_6)
+}
+
+spring_personal_node_5_edge_1 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_5_edge_2 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}
+
+spring_personal_node_7_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_7)
+}
+
+spring_personal_node_6_edge_1 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_6_edge_2 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}
+
+spring_personal_node_7_edge_0 {
+    - CreateSpringEdgeData{0.001}
+    - (CreateSpringEdge, spring_personal_node_parent)
+}
+
+spring_personal_node_7_edge_1 {
+    - CreateSpringEdgeData{0.005}
+    - (CreateSpringEdge, ui_personal_node_anchor)
+}

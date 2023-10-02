@@ -1,0 +1,176 @@
+using flecs.meta
+
+Struct GraphNode {
+  x :- {f32}
+  y :- {f32}
+}
+
+Struct Edge {
+    head_x :- {f32}
+    head_y :- {f32}
+    tail_x :- {f32}
+    tail_y :- {f32}
+}
+
+Struct ConicEdgeMod {
+  mid_x :- {f32}
+  mid_y :- {f32}
+  weight :- {f32}
+}
+
+Struct CubicEdgeMod {
+    mid_a_x :- {f32}
+    mid_a_y :- {f32}
+    mid_b_x :- {f32}
+    mid_b_y :- {f32}
+}
+
+node_0 {
+    - GraphNode{344, 111}
+    - Edge{344, 111, 279, 127}
+    - ConicEdgeMod{316, 121, 1}
+    }
+
+node_1 {
+    - GraphNode{264, -157}
+    - Edge{264, -157, 219, -162}
+    - ConicEdgeMod{243, -162, 1}
+    }
+
+node_2 {
+    - GraphNode{137, 4}
+    - Edge{137, 4, 166, 40}
+    - ConicEdgeMod{147, 27, 1}
+    }
+
+node_3 {
+    - GraphNode{166, 40}
+    - Edge{166, 40, 211, 52}
+    - ConicEdgeMod{185, 52, 1}
+    }
+
+node_4 {
+    - GraphNode{26, -56}
+    - Edge{26, -56, 48, -155}
+    - ConicEdgeMod{26, -113, 1}
+    }
+
+node_5 {
+    - GraphNode{219, -162}
+    - Edge{219, -162, 166, -147}
+    - ConicEdgeMod{186, -162, 1}
+    }
+
+node_6 {
+    - GraphNode{218, -243}
+    - Edge{218, -243, 283, -236}
+    - ConicEdgeMod{252, -243, 1}
+    }
+
+node_7 {
+    - GraphNode{186, -86}
+    - Edge{186, -86, 344, -86}
+    }
+
+node_8 {
+    - GraphNode{252, -10}
+    - Edge{252, -10, 186, -10}
+    }
+
+node_9 {
+    - GraphNode{279, 127}
+    - Edge{279, 127, 203, 133}
+    - ConicEdgeMod{243, 133, 1}
+    }
+
+node_10 {
+    - GraphNode{186, -10}
+    - Edge{186, -10, 186, -86}
+    }
+
+node_11 {
+    - GraphNode{283, -236}
+    - Edge{283, -236, 337, -220}
+    - ConicEdgeMod{314, -230, 1}
+    }
+
+node_12 {
+    - GraphNode{48, 50}
+    - Edge{48, 50, 26, -56}
+    - ConicEdgeMod{26, 8, 1}
+    }
+
+node_13 {
+    - GraphNode{166, -147}
+    - Edge{166, -147, 137, -107}
+    - ConicEdgeMod{146, -132, 1}
+    }
+
+node_14 {
+    - GraphNode{344, -86}
+    - Edge{344, -86, 344, 111}
+    }
+
+node_15 {
+    - GraphNode{110, 113}
+    - Edge{110, 113, 48, 50}
+    - ConicEdgeMod{71, 92, 1}
+    }
+
+node_16 {
+    - GraphNode{113, -220}
+    - Edge{113, -220, 218, -243}
+    - ConicEdgeMod{156, -243, 1}
+    }
+
+node_17 {
+    - GraphNode{137, -107}
+    - Edge{137, -107, 128, -53}
+    - ConicEdgeMod{128, -83, 1}
+    }
+
+node_18 {
+    - GraphNode{232, 51}
+    - Edge{232, 51, 252, 47}
+    - ConicEdgeMod{245, 49, 1}
+    }
+
+node_19 {
+    - GraphNode{48, -155}
+    - Edge{48, -155, 113, -220}
+    - ConicEdgeMod{70, -197, 1}
+    }
+
+node_20 {
+    - GraphNode{337, -220}
+    - Edge{337, -220, 305, -142}
+    }
+
+node_21 {
+    - GraphNode{252, 47}
+    - Edge{252, 47, 252, -10}
+    }
+
+node_22 {
+    - GraphNode{211, 52}
+    - Edge{211, 52, 232, 51}
+    - ConicEdgeMod{220, 52, 1}
+    }
+
+node_23 {
+    - GraphNode{305, -142}
+    - Edge{305, -142, 264, -157}
+    - ConicEdgeMod{286, -152, 1}
+    }
+
+node_24 {
+    - GraphNode{203, 133}
+    - Edge{203, 133, 110, 113}
+    - ConicEdgeMod{150, 133, 1}
+    }
+
+node_25 {
+    - GraphNode{128, -53}
+    - Edge{128, -53, 137, 4}
+    - ConicEdgeMod{128, -19, 1}
+    }

@@ -1,0 +1,188 @@
+using flecs.meta
+
+Struct GraphNode {
+  x :- {f32}
+  y :- {f32}
+}
+
+spring_node_0 {
+    - GraphNode{249, 297}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_3)
+    - (Equivariant, node_0)
+}
+
+spring_node_1 {
+    - GraphNode{156, 77}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_15)
+    - (Equivariant, node_1)
+}
+
+spring_node_2 {
+    - GraphNode{111, 290}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_20)
+    - (Equivariant, node_2)
+}
+
+spring_node_3 {
+    - GraphNode{285, 96}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_21)
+    - (Equivariant, node_3)
+}
+
+spring_node_4 {
+    - GraphNode{89, 204}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_8)
+    - (Equivariant, node_4)
+}
+
+spring_node_5 {
+    - GraphNode{219, 236}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_16)
+    - (Equivariant, node_5)
+}
+
+spring_node_6 {
+    - GraphNode{71, 268}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_11)
+    - (Equivariant, node_6)
+}
+
+spring_node_7 {
+    - GraphNode{100, 170}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_1)
+    - (Equivariant, node_7)
+}
+
+spring_node_8 {
+    - GraphNode{151, 105}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_25)
+    - (Equivariant, node_8)
+}
+
+spring_node_9 {
+    - GraphNode{246, 162}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_4)
+    - (Equivariant, node_9)
+}
+
+spring_node_10 {
+    - GraphNode{187, 77}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_0)
+    - (Equivariant, node_10)
+}
+
+spring_node_11 {
+    - GraphNode{88, 137}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_12)
+    - (Equivariant, node_11)
+}
+
+spring_node_12 {
+    - GraphNode{276, 252}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_7)
+    - (Equivariant, node_12)
+}
+
+spring_node_13 {
+    - GraphNode{28, 270}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_17)
+    - (Equivariant, node_13)
+}
+
+spring_node_14 {
+    - GraphNode{126, 119}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_2)
+    - (Equivariant, node_14)
+}
+
+spring_node_15 {
+    - GraphNode{154, 142}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_6)
+    - (Equivariant, node_15)
+}
+
+spring_node_16 {
+    - GraphNode{260, 277}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_10)
+    - (Equivariant, node_16)
+}
+
+spring_node_17 {
+    - GraphNode{205, 240}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_18)
+    - (Equivariant, node_17)
+}
+
+spring_node_18 {
+    - GraphNode{197, 278}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_23)
+    - (Equivariant, node_18)
+}
+
+spring_node_19 {
+    - GraphNode{266, 248}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_9)
+    - (Equivariant, node_19)
+}
+
+spring_node_20 {
+    - GraphNode{296, 137}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_13)
+    - (Equivariant, node_20)
+}
+
+spring_node_21 {
+    - GraphNode{4, 85}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_24)
+    - (Equivariant, node_21)
+}
+
+spring_node_22 {
+    - GraphNode{182, 195}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_22)
+    - (Equivariant, node_22)
+}
+
+spring_node_23 {
+    - GraphNode{50, 19}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_14)
+    - (Equivariant, node_23)
+}
+
+spring_node_24 {
+    - GraphNode{15, 242}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_5)
+    - (Equivariant, node_24)
+}
+
+spring_node_25 {
+    - GraphNode{252, 147}
+    - PhysicalNodeSim
+    - (CreateSpringEdge, spring_node_19)
+    - (Equivariant, node_25)
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GraphLife</string>
+    <string name="mapbox_access_token">pk.eyJ1Ijoid2VzeGR6IiwiYSI6ImNsbXQ5OGgzajAyYWUya282N2Vjd2ZxcTkifQ.TGJLVT3I0tCeb2ANuzwLQQ</string>
+    <string name="greeting">Intention 📜\nspacetime\nCapital 💵\nSkills 🧠\nInventory 🎒\nEmotions 🤭\nLove 🍑\nSoftware 💾</string>
+    <string name="general">Books 📖\n</string>
+    <string name="channel_name">GraphLifeServices</string>
+    <string name="channel_description">A better life on the graph</string>
+    <string name="notification_title">Wesley, Graph here. ☺️🧠</string>
+    <string name="notification_msg">foraging your possible futures...</string>
+</resources>

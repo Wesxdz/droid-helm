@@ -1,0 +1,210 @@
+using flecs.meta
+
+Struct GraphNode {
+  x :- {f32}
+  y :- {f32}
+}
+
+keyboard_node_0 {
+    - GraphNode{0.0, 1000}
+    - (DiEdge, keyboard_node_1)
+    - (DiEdge, keyboard_node_10)
+}
+
+keyboard_node_1 {
+    - GraphNode{96.0, 1000}
+    - (DiEdge, keyboard_node_2)
+    - (DiEdge, keyboard_node_11)
+}
+
+keyboard_node_2 {
+    - GraphNode{192.0, 1000}
+    - (DiEdge, keyboard_node_3)
+    - (DiEdge, keyboard_node_12)
+}
+
+keyboard_node_3 {
+    - GraphNode{288.0, 1000}
+    - (DiEdge, keyboard_node_4)
+    - (DiEdge, keyboard_node_13)
+}
+
+keyboard_node_4 {
+    - GraphNode{384.0, 1000}
+    - (DiEdge, keyboard_node_5)
+    - (DiEdge, keyboard_node_14)
+}
+
+keyboard_node_5 {
+    - GraphNode{480.0, 1000}
+    - (DiEdge, keyboard_node_6)
+    - (DiEdge, keyboard_node_15)
+}
+
+keyboard_node_6 {
+    - GraphNode{576.0, 1000}
+    - (DiEdge, keyboard_node_7)
+    - (DiEdge, keyboard_node_16)
+}
+
+keyboard_node_7 {
+    - GraphNode{672.0, 1000}
+    - (DiEdge, keyboard_node_8)
+    - (DiEdge, keyboard_node_17)
+}
+
+keyboard_node_8 {
+    - GraphNode{768.0, 1000}
+    - (DiEdge, keyboard_node_9)
+    - (DiEdge, keyboard_node_18)
+}
+
+keyboard_node_9 {
+    - GraphNode{864.0, 1000}
+    - (DiEdge, keyboard_node_19)
+}
+
+keyboard_node_10 {
+    - GraphNode{48.0, 1096}
+    - (DiEdge, keyboard_node_11)
+    - (DiEdge, keyboard_node_20)
+}
+
+keyboard_node_11 {
+    - GraphNode{144.0, 1096}
+    - (DiEdge, keyboard_node_12)
+    - (DiEdge, keyboard_node_21)
+}
+
+keyboard_node_12 {
+    - GraphNode{240.0, 1096}
+    - (DiEdge, keyboard_node_13)
+    - (DiEdge, keyboard_node_22)
+}
+
+keyboard_node_13 {
+    - GraphNode{336.0, 1096}
+    - (DiEdge, keyboard_node_14)
+    - (DiEdge, keyboard_node_23)
+}
+
+keyboard_node_14 {
+    - GraphNode{432.0, 1096}
+    - (DiEdge, keyboard_node_15)
+    - (DiEdge, keyboard_node_24)
+}
+
+keyboard_node_15 {
+    - GraphNode{528.0, 1096}
+    - (DiEdge, keyboard_node_16)
+    - (DiEdge, keyboard_node_25)
+}
+
+keyboard_node_16 {
+    - GraphNode{624.0, 1096}
+    - (DiEdge, keyboard_node_17)
+    - (DiEdge, keyboard_node_26)
+}
+
+keyboard_node_17 {
+    - GraphNode{720.0, 1096}
+    - (DiEdge, keyboard_node_18)
+    - (DiEdge, keyboard_node_27)
+}
+
+keyboard_node_18 {
+    - GraphNode{816.0, 1096}
+    - (DiEdge, keyboard_node_19)
+    - (DiEdge, keyboard_node_28)
+}
+
+keyboard_node_19 {
+    - GraphNode{912.0, 1096}
+}
+
+keyboard_node_20 {
+    - GraphNode{96.0, 1192}
+    - (DiEdge, keyboard_node_21)
+    - (DiEdge, keyboard_node_29)
+}
+
+keyboard_node_21 {
+    - GraphNode{192.0, 1192}
+    - (DiEdge, keyboard_node_22)
+    - (DiEdge, keyboard_node_30)
+}
+
+keyboard_node_22 {
+    - GraphNode{288.0, 1192}
+    - (DiEdge, keyboard_node_23)
+    - (DiEdge, keyboard_node_31)
+}
+
+keyboard_node_23 {
+    - GraphNode{384.0, 1192}
+    - (DiEdge, keyboard_node_24)
+    - (DiEdge, keyboard_node_32)
+}
+
+keyboard_node_24 {
+    - GraphNode{480.0, 1192}
+    - (DiEdge, keyboard_node_25)
+    - (DiEdge, keyboard_node_33)
+}
+
+keyboard_node_25 {
+    - GraphNode{576.0, 1192}
+    - (DiEdge, keyboard_node_26)
+    - (DiEdge, keyboard_node_34)
+}
+
+keyboard_node_26 {
+    - GraphNode{672.0, 1192}
+    - (DiEdge, keyboard_node_27)
+    - (DiEdge, keyboard_node_35)
+}
+
+keyboard_node_27 {
+    - GraphNode{768.0, 1192}
+    - (DiEdge, keyboard_node_28)
+}
+
+keyboard_node_28 {
+    - GraphNode{864.0, 1192}
+}
+
+keyboard_node_29 {
+    - GraphNode{144.0, 1288}
+    - (DiEdge, keyboard_node_30)
+}
+
+keyboard_node_30 {
+    - GraphNode{240.0, 1288}
+    - (DiEdge, keyboard_node_31)
+}
+
+keyboard_node_31 {
+    - GraphNode{336.0, 1288}
+    - (DiEdge, keyboard_node_32)
+}
+
+keyboard_node_32 {
+    - GraphNode{432.0, 1288}
+    - (DiEdge, keyboard_node_33)
+}
+
+keyboard_node_33 {
+    - GraphNode{528.0, 1288}
+    - (DiEdge, keyboard_node_34)
+}
+
+keyboard_node_34 {
+    - GraphNode{624.0, 1288}
+    - (DiEdge, keyboard_node_35)
+}
+
+keyboard_node_35 {
+    - GraphNode{720.0, 1288}
+}
+
+
