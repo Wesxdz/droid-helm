@@ -2,8 +2,6 @@ package com.example.graphlife
 
 //import com.google.androidgamesdk.GameActivity
 
-// MongoDB
-
 // Mapbox
 
 // for plaid token exchange
@@ -82,33 +80,8 @@ import com.plaid.link.result.LinkExit
 import com.plaid.link.result.LinkSuccess
 import fuel.Fuel
 import fuel.get
-import io.realm.kotlin.Realm
-import io.realm.kotlin.RealmConfiguration
-import io.realm.kotlin.mongodb.App
-import io.realm.kotlin.mongodb.Credentials
-import io.realm.kotlin.mongodb.User
-import io.realm.kotlin.mongodb.sync.SyncConfiguration
-import io.realm.kotlin.query.RealmResults
-import io.realm.kotlin.types.RealmObject
-import io.realm.kotlin.types.annotations.PrimaryKey
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
-import org.mongodb.kbson.ObjectId
-import kotlin.reflect.KClass
-
-
-class LocationItem() : RealmObject {
-    @PrimaryKey
-    var _id: ObjectId = ObjectId()
-    var owner_id: String = ""
-    var latitude = 0.0
-    var longitude = 0.0
-    constructor(owner_id : String, latitude : Double, longitude : Double) : this() {
-        this.owner_id = owner_id
-        this.latitude = latitude
-        this.longitude = longitude
-    }
-}
 
 class GraphNode {
     constructor(x: Float, y :Float, radius : Float) {
@@ -390,46 +363,9 @@ class TrackLocationWorker(context: Context, workerParams: WorkerParameters) : Wo
     }
 }
 
-class MongoIntegration
-{
-    constructor() {
-        runBlocking {
-            init()
-        }
-    }
-
-    public var realm: Realm? = null
-    public var user : User? = null
-
-    suspend fun init() {
-        // Attempt to login with access to internet, otherwise offline...
-        // TODO: Understand how losing signal affects Realm sync/Location tracking
-        // TODO: Upload financial data to cloud for GNN orchestration
-        attemptOnlineLogin()
-    }
-
-    private suspend fun attemptOnlineLogin()
-    {
-        val app = App.create("devicesync-rjoes")
-        // TODO: Get actual credentials...
-        val credentials = Credentials.anonymous()
-        user = app.login(credentials)
-        val config = SyncConfiguration.create(user, setOf(LocationItem::class)) // Set<KClass<out TypedRealmObject>
-        realm = Realm.open(config)
-    }
-
-    fun createOfflineRealm()
-    {
-        val config = RealmConfiguration.create(schema = setOf(LocationItem::class))
-        realm = Realm.open(config)
-    }
-
-}
-
 // Foreground service that stores location transition nodes!
 class TrackLocationService() : Service()
 {
-    var mongoDB : MongoIntegration = MongoIntegration()
     private val handler = Handler()
     private var isRunning = false
     var lastLongitude : Double = 0.0
@@ -510,21 +446,18 @@ class TrackLocationService() : Service()
                 if (location != null) {
                     // Print the location via debug
                     Log.d("Location", "Latitude: ${location.latitude}, Longitude: ${location.longitude}")
-                    if (location.longitude != lastLongitude && location.latitude != lastLatitude)
-                    mongoDB?.realm?.writeBlocking {
-                        copyToRealm(LocationItem().apply {
-
-                            latitude = location.latitude
-                            longitude = location.longitude
-                        })
+                    if (location.longitude != lastLongitude && location.latitude != lastLatitude) {
+                        // TODO: Flow to GraphLife server
+                        // latitude = location.latitude
+                        // longitude = location.longitude
                     }
                     lastLongitude = location.longitude
                     lastLatitude = location.latitude
                     val updateMapIntent = Intent("UpdateLocationMap")
 //                    updateMapIntent.setData()
                     sendBroadcast(updateMapIntent)
-                    val locations : RealmResults<LocationItem>? = mongoDB?.realm?.query<LocationItem>(LocationItem::class)?.find()
-                    Log.d("Location", "Total location nodes stored: ${locations?.size}")
+                    // TODO: Send flecs query for locations to GraphLife server
+//                    Log.d("Location", "Total location nodes stored: ${locations?.size}")
                 } else {
                     // Handle the case where the location is null
                     Log.e("Location", "Location is null")
@@ -555,20 +488,19 @@ class MainActivity : AppCompatActivity() {
             if (intent.getAction().equals("UpdateLocationMap"))
             {
                 Log.d("Location", "Update location from activity!")
-                val config = RealmConfiguration.create(schema = setOf(LocationItem::class))
-                val realm: Realm = Realm.open(config)
-                val location : LocationItem = realm.query<LocationItem>(LocationItem::class).find().last()
+                // TODO: Get current location from GraphLife server
 
-                val camera : CameraOptions = CameraOptions.Builder()
-                    .center(Point.fromLngLat(location.longitude, location.latitude))
-                    .build()
+//                val camera : CameraOptions = CameraOptions.Builder()
+//                    .center(Point.fromLngLat(location.longitude, location.latitude))
+//                    .build()
+
                 // Don't dox yourself lmao
 //                val camera : CameraOptions = CameraOptions.Builder()
 //                    .center(Point.fromLngLat(-122.1701, 37.4277))
 //                    .build()
 
-                mapView = parentActivity?.findViewById<MapView>(R.id.mapView)
-                mapView?.getMapboxMap()?.setCamera(camera)
+//                mapView = parentActivity?.findViewById<MapView>(R.id.mapView)
+//                mapView?.getMapboxMap()?.setCamera(camera)
             }
         }
     }
